@@ -74,7 +74,7 @@ function my_keydown(e)
 }
 
 function Check(){
-	if( car_x > '400' && car_y < '110' || car_x <= '460' && car_y >= '80' ){
+	if( car_x > '400' && car_y > '110' || car_x <= '460' && car_y <= '80' ){
 		ctx.drawImage(win_imgTag,0,0,canvas.width,canvas.height)
 		reset=1;
 	document.getElementById("Change").innerHTML = "Click Me To Continue";
