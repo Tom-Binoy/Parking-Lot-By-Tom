@@ -74,10 +74,11 @@ function my_keydown(e)
 }
 
 function Check(){
-	if( car_x > '400' && car_y > '110' || car_x <= '460' && car_y <= '80' ){
+	if( (car_x >= 400 && car_x <= 460) && (car_y >= 80 && car_y <= 110) ){
 		ctx.drawImage(win_imgTag,0,0,canvas.width,canvas.height)
 		reset=1;
-	document.getElementById("Change").innerHTML = "Click Me To Continue";
+		document.getElementById("Change").innerHTML = "Click Me To Continue";
+		console.log("You Called Check Function");
 	}
 }
 
@@ -87,6 +88,7 @@ function Reset(){
 		uploadBackground()
 		uploadgreencar()
 		document.getElementById("Change").innerHTML = "Move the green car with arrow keys";
+		console.log("You Called Reset Function");
 	}
 }
 
